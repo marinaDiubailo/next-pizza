@@ -3,7 +3,7 @@
   --color-text-primary: var(--color-stone-950);
   --color-text-secondary: var(--color-stone-600);
   --color-text-inverted: var(--color-orange-50);
-  --color-text-accent: var(--color-orange-700);
+  --color-text-accent: var(--color-orange-600);
   --color-text-error: var(--color-red-700);
 
   /* backgrounds */
@@ -16,6 +16,7 @@
   --radius-s: 4px;
   --radius-m: 8px;
   --border-primary: 1px solid var(--color-stone-700);
-  --border-accent: 2px solid var(--color-orange-700);
+  --border-secondary: 1px solid var(--color-stone-200);
+  --border-accent: 2px solid var(--color-orange-600);
   --border-accent-hover: 2px solid var(--color-orange-800);
 }

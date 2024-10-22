@@ -48,7 +48,7 @@
 
 .outlined {
   color: var(--color-text-accent);
-  background-color: transparent;
+  background-color: var(--color-orange-50);
   border: var(--border-accent);
 
   &:active,
