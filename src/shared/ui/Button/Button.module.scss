@@ -7,7 +7,7 @@
   justify-content: center;
 
   width: fit-content;
-  padding: 12px 20px;
+  padding: 8px 20px;
 
   font-size: 1rem;
   font-weight: 700;
@@ -15,7 +15,9 @@
   border: none;
   border-radius: var(--radius-m);
 
-  transition: background-color 0.3 ease-in-out;
+  transition:
+    background-color 0.3 ease-in-out,
+    color 0.3 ease-in-out;
 
   &:disabled {
     cursor: initial;
@@ -30,17 +32,17 @@
 
   &:active,
   &:hover:not(:disabled) {
-    background-color: var(--color-orange-600);
+    background-color: var(--color-bg-accent-hover);
   }
 }
 
 .secondary {
   color: var(--color-text-accent);
-  background-color: var(--color-orange-50);
+  background-color: var(--color-orange-200);
 
   &:active,
   &:hover:not(:disabled) {
-    background-color: var(--color-orange-100);
+    background-color: var(--color-orange-300);
   }
 }
 
@@ -51,7 +53,7 @@
 
   &:active,
   &:hover:not(:disabled) {
-    background-color: var(--color-orange-50);
+    background-color: var(--color-orange-100);
   }
 }
 

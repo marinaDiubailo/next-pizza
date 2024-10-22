@@ -1,0 +1,26 @@
+.header {
+  padding: 24px 0;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  flex-grow: 1;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+}
