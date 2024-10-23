@@ -27,3 +27,16 @@
   display: flex;
   gap: 15px;
 }
+
+.devider {
+  width: 2px;
+  height: 100%;
+  background-color: var(--color-bg-accent);
+}
+
+.count {
+  padding: 0 6px;
+  color: var(--color-text-inverted);
+  background-color: var(--color-bg-accent);
+  border-radius: 50%;
+}

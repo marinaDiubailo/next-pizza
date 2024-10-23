@@ -19,7 +19,10 @@ export const Header: React.FC<React.ComponentProps<'header'>> = ({ className }) 
             <span>Войти</span>
           </Button>
           <Button variant={'outlined'}>
+            <b>520 p</b>
+            <span className={s.devider} />
             <ShoppingCart />
+            <b className={s.count}>3</b>
           </Button>
         </div>
       </Container>

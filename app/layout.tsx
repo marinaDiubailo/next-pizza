@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import '../src/app/styles/index.scss'
-import { Header } from '@/widgets/header/ui/Header/Header'
+import { Header } from '@/widgets/header'
 
 const nunito = Nunito({
   subsets: ['cyrillic'],
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body className={nunito.className}>
         <Header />
         {children}
