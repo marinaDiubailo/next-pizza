@@ -1,0 +1,13 @@
+.categories {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  width: fit-content;
+  max-width: 800px;
+  padding: 4px;
+
+  background-color: var(--color-stone-100);
+  border-radius: var(--radius-s);
+}

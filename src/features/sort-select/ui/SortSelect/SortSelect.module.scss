@@ -1,0 +1,73 @@
+.trigger {
+  cursor: pointer;
+
+  display: flex;
+  gap: 6px;
+  align-items: center;
+
+  width: 240px;
+  padding: 11px 20px;
+
+  line-height: 1.25rem;
+
+  background-color: var(--color-stone-100);
+  border: 1px solid transparent;
+  border-radius: var(--radius-s);
+
+  & span[data-value="true"] {
+    color: var(--color-text-accent);
+  }
+
+  &:focus-visible,
+  &[data-state="open"] {
+    border: var(--border-secondary);
+    outline: none;
+  }
+}
+
+.content {
+  overflow: hidden;
+
+  width: var(--radix-select-trigger-width);
+
+  background-color: var(--color-stone-100);
+  border: var(--border-secondary);
+  border-radius: var(--radius-s);
+  outline: none;
+
+  &[data-state="closed"] {
+    animation: slide-up 0.3s ease-in;
+  }
+
+  &[data-state="open"] {
+    animation: slide-down 0.3s ease-in;
+  }
+}
+
+.item {
+  cursor: pointer;
+
+  width: 100%;
+  padding: 12px 24px;
+
+  background-color: transparent;
+
+  transition: background-color 0.3s;
+
+  &[data-highlighted] {
+    background-color: var(--color-stone-300);
+    outline: none;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1;
+  }
+}
