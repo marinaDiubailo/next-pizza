@@ -1,0 +1,22 @@
+.category {
+  padding: 8px 16px;
+
+  font-weight: 500;
+  line-height: 1.25rem;
+
+  background-color: transparent;
+  border: none;
+  border-radius: var(--radius-s);
+
+  transition: color 0.3s ease 0s;
+
+  &:hover {
+    color: var(--color-text-accent);
+  }
+}
+
+.active {
+  color: var(--color-text-accent);
+  background-color: var(--color-bg-primary);
+  box-shadow: 0 0 12px rgba(0 0 0 / 20.5%);
+}
