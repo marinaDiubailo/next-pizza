@@ -13,10 +13,10 @@
   --color-bg-accent-hover: var(--color-orange-700);
 
   /* borders */
-  --radius-s: 4px;
-  --radius-m: 8px;
+  --radius-s: 16px;
+  --radius-m: 20px;
   --border-primary: 1px solid var(--color-stone-700);
   --border-secondary: 1px solid var(--color-stone-200);
-  --border-accent: 2px solid var(--color-orange-600);
-  --border-accent-hover: 2px solid var(--color-orange-800);
+  --border-accent: 1px solid var(--color-orange-600);
+  --border-accent-hover: 1px solid var(--color-orange-800);
 }
