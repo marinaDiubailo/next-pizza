@@ -1,0 +1,56 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.item {
+  width: 24px;
+  height: 24px;
+
+  background-color: var(--color-stone-200);
+  border: 1px solid transparent;
+  border-radius: 100%;
+
+  &[data-state="checked"] {
+    background-color: var(--color-bg-accent);
+  }
+
+  &:focus-visible {
+    border: var(--border-accent-hover);
+    outline: none;
+  }
+}
+
+.indicator {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  &::after {
+    content: "";
+
+    display: block;
+
+    width: 10px;
+    height: 10px;
+
+    background-color: var(--color-bg-primary);
+    border-radius: 50%;
+  }
+}
+
+.label {
+  font-size: 1rem;
+}
