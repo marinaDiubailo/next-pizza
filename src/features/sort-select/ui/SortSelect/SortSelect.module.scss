@@ -10,7 +10,7 @@
 
   line-height: 1.25rem;
 
-  background-color: var(--color-stone-100);
+  background-color: var(--color-bg-secondary);
   border: 1px solid transparent;
   border-radius: var(--radius-s);
 
@@ -26,11 +26,13 @@
 }
 
 .content {
+  z-index: 20;
+
   overflow: hidden;
 
   width: var(--radix-select-trigger-width);
 
-  background-color: var(--color-stone-100);
+  background-color: var(--color-bg-secondary);
   border: var(--border-secondary);
   border-radius: var(--radius-s);
   outline: none;
