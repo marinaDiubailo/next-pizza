@@ -1,0 +1,36 @@
+.root {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.checkbox {
+  cursor: pointer;
+
+  width: 24px;
+  height: 24px;
+
+  background-color: var(--color-stone-200);
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  &[data-state="checked"] {
+    background-color: var(--color-bg-accent);
+  }
+
+  &:focus-visible {
+    border: var(--border-accent);
+    outline: none;
+  }
+}
+
+.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-bg-primary);
+}
+
+.label {
+  font-size: 1rem;
+}
