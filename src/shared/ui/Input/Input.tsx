@@ -8,16 +8,17 @@ import s from './Input.module.scss'
 import { Eye, EyeOff, X, Search } from 'lucide-react'
 
 export type InputProps = {
+  addonRight?: React.ReactNode
   disabled?: boolean
   errorMessage?: string
   label?: string
   onClearClick?: () => void
   onEnter?: (e: React.KeyboardEvent<HTMLInputElement>) => void
-  value?: string
 } & React.ComponentPropsWithoutRef<'input'>
 
 export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
   const {
+    addonRight,
     className,
     disabled,
     errorMessage,
@@ -34,7 +35,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
   const showError = !!errorMessage && errorMessage.length > 0
   const isSearchField = type === 'search'
   const isPasswordField = type === 'password'
-  const isShowClearButton = onClearClick && rest?.value?.length! > 0
+  const isShowClearButton =
+    onClearClick && typeof rest?.value === 'string' && rest?.value?.length! > 0
 
   const generatedId = useId()
   const inputId = id ?? generatedId
@@ -56,7 +58,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
       s.input,
       showError && s.error,
       isSearchField && s.hasSearchIcon,
-      (isPasswordField || isShowClearButton) && s.hasEndIcon
+      (isPasswordField || isShowClearButton || Boolean(addonRight)) && s.hasEndIcon
     ),
     inputWrapper: clsx(s.inputWrapper, disabled && s.disabled),
     label: clsx(s.label, disabled && s.disabled),
@@ -107,6 +109,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
             {showPassword ? <Eye aria-hidden /> : <EyeOff aria-hidden />}
           </button>
         )}
+        {addonRight}
       </div>
       {errorMessage && <p className={s.errorMessage}>{errorMessage}</p>}
     </div>
