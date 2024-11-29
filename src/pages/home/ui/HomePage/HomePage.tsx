@@ -1,11 +1,14 @@
 import { Topbar } from '@/widgets/topbar'
-import { Checkbox } from '@/shared/ui'
+import { Container } from '@/shared/ui'
+import { Sidebar } from '@/widgets/sidebar'
 
 export const HomePage = () => {
   return (
     <main>
       <Topbar />
-      <Checkbox label={'Чеснок'} />
+      <Container>
+        <Sidebar />
+      </Container>
     </main>
   )
 }
