@@ -38,11 +38,21 @@
 
 .secondary {
   color: var(--color-text-accent);
-  background-color: var(--color-orange-200);
+  background-color: var(--color-orange-50);
 
   &:active,
   &:hover:not(:disabled) {
     background-color: var(--color-orange-300);
+  }
+}
+
+.tertiary {
+  color: var(--color-text-secondary);
+  background-color: var(--color-stone-200);
+
+  &:active,
+  &:hover:not(:disabled) {
+    background-color: var(--color-stone-300);
   }
 }
 

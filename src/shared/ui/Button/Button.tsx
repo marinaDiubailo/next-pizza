@@ -6,7 +6,7 @@ import s from './Button.module.scss'
 
 import type { PolymorphPropsWithRef, PolymorphRef } from '../../types/polymorph'
 
-type ButtonVariant = 'outlined' | 'primary' | 'secondary'
+type ButtonVariant = 'outlined' | 'primary' | 'secondary' | 'tertiary'
 
 type ElementProps = {
   fullWidth?: boolean
