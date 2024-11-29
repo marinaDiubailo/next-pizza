@@ -7,13 +7,13 @@
   display: flex;
   align-items: center;
 
-  width: 100px;
+  width: 100%;
   height: 12px;
 
   &[data-orientation="vertical"] {
     flex-direction: column;
     width: 12px;
-    height: 100px;
+    height: 100%;
   }
 }
 
@@ -82,4 +82,11 @@
     background-color: var(--color-bg-accent);
     transition: all 0.3s ease 0s;
   }
+}
+
+.label {
+  position: absolute;
+  bottom: -150%;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
 }

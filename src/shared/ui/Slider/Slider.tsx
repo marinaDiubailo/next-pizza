@@ -5,10 +5,12 @@ import clsx from 'clsx'
 
 import s from './Slider.module.scss'
 
-export type SliderProps = React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
+export type SliderProps = { withLabel?: boolean } & React.ComponentPropsWithoutRef<
+  typeof SliderPrimitive.Root
+>
 
 export const Slider = forwardRef<React.ElementRef<typeof SliderPrimitive.Root>, SliderProps>(
-  ({ className, ...props }, ref) => {
+  ({ className, withLabel, ...props }, ref) => {
     const value = props.value || props.defaultValue
 
     return (
@@ -16,7 +18,20 @@ export const Slider = forwardRef<React.ElementRef<typeof SliderPrimitive.Root>, 
         <SliderPrimitive.Track className={s.track}>
           <SliderPrimitive.Range className={s.range} />
         </SliderPrimitive.Track>
-        {value?.map((_, i) => <SliderPrimitive.Thumb className={s.thumb} key={i} />)}
+        {value?.map((item, i) => {
+          if (withLabel) {
+            return (
+              <SliderPrimitive.Thumb key={i} asChild>
+                <div className={s.thumb}>
+                  <span className={s.label} aria-hidden>
+                    {item}
+                  </span>
+                </div>
+              </SliderPrimitive.Thumb>
+            )
+          }
+          return <SliderPrimitive.Thumb className={s.thumb} key={i} />
+        })}
       </SliderPrimitive.Root>
     )
   }
