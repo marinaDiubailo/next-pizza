@@ -4,6 +4,7 @@ import s from './Header.module.scss'
 import clsx from 'clsx'
 import { Button, Container, Input } from '@/shared/ui'
 import { User, ShoppingCart } from 'lucide-react'
+import Link from 'next/link'
 
 export const Header: React.FC<React.ComponentProps<'header'>> = ({ className }) => {
   return (
@@ -14,15 +15,16 @@ export const Header: React.FC<React.ComponentProps<'header'>> = ({ className }) 
           <Input type={'search'} placeholder={'Поиск пиццы'} />
         </form>
         <div className={s.actions}>
-          <Button>
+          <Button variant={'tertiary'}>
             <User size={20} />
             <span>Войти</span>
           </Button>
-          <Button variant={'outlined'}>
-            <b>520 p</b>
+          <Button>
+            {/* <b>520 p</b>
             <span className={s.devider} />
             <ShoppingCart />
-            <b className={s.count}>3</b>
+            <b className={s.count}>3</b> */}
+            Корзина
           </Button>
         </div>
       </Container>
